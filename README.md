@@ -68,35 +68,36 @@ D:\Desktop\programing\
 
 The Streamlit app offers the following features:
 
-User-Friendly Interface:
-
+* User-Friendly Interface:
 Form-based input for customer demographics, account information, services, and billing details.
 Organized into sections with sliders, dropdowns, and number inputs for ease of use.
 
-Churn Predictions:
+* Churn Predictions:
 Displays predictions from Logistic Regression, Random Forest, and XGBoost.
 Shows churn probability as a percentage for each model.
 Visualized using Streamlit metrics for quick interpretation.
 
-Feature Importance:
+* Feature Importance:
 Displays a bar chart of the top 5 features influencing the XGBoost prediction.
 Helps identify key factors driving churn (e.g., tenure, contract type).
 
-Personalized Interventions:
+* Personalized Interventions:
 Generates tailored retention recommendations based on input data and churn probability.
 
-Examples:
+* Examples:
 Offer discounts for month-to-month contract customers.
 Provide onboarding support for new customers (<12 months tenure).
 Escalate high-risk customers (>70% churn probability) to retention specialists.
 
-Customer Summary:
+* Customer Summary:
 Summarizes key customer details (ID, tenure, monthly charges, contract, services).
 Aids in quick review and decision-making.
 
-Debugging Support:
+* Debugging Support:
 Outputs processed data columns and expected feature names for troubleshooting feature mismatches.
 Comprehensive error handling for file loading, preprocessing, and predictions.
+
+![image](https://github.com/user-attachments/assets/e32ee714-d6e4-4012-9e21-c964898225a2)
 
 # Conclusion
 Best Model: XGBoost achieved 85% accuracy and 0.84 AUC-ROC.
