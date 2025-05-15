@@ -21,6 +21,82 @@ Provide actionable business recommendations to reduce churn.
 
 ![image](https://github.com/user-attachments/assets/33f73894-96fd-4ebf-b923-e095a97a8ae6)
 
+# Model Details
+
+The project uses three machine learning models to predict customer churn:
+
+* Logistic Regression:
+
+Algorithm: Linear model for binary classification.
+Parameters: max_iter=1000 for convergence.
+Strengths: Interpretable, performs well on linearly separable data.
+Usage: Predicts churn probability and provides a baseline model.
+
+* Random Forest:
+
+Algorithm: Ensemble of decision trees using bagging.
+Parameters: random_state=42 for reproducibility.
+Strengths: Handles non-linear relationships, robust to overfitting.
+Usage: Provides robust predictions and feature importance.
+
+* XGBoost:
+
+Algorithm: Gradient boosting with decision trees.
+Parameters: use_label_encoder=False, eval_metric='logloss'.
+Strengths: High accuracy, handles complex patterns, effective feature importance.
+Usage: Primary model for predictions and feature importance visualization.
+
+# Project Structure
+
+The project is organized as follows: 
+
+D:\Desktop\programing\
+├── .venv\                     # Virtual environment
+├── pythonProject\python_py\   # Original directory for Streamlit app
+│   └── churn_prediction_dashboard.py
+├── WA_Fn-UseC_-Telco-Customer-Churn.csv  # Dataset (place here or update path)
+├── training_script.py         # Script to train models and save .pkl files
+├── churn_prediction_dashboard2.py  # Streamlit app for churn prediction
+└── New folder\                # Directory for saved .pkl files
+    ├── logistic_regression.pkl
+    ├── random_forest.pkl
+    ├── xgboost.pkl
+    ├── scaler.pkl
+    ├── feature_names.pkl
+
+# Features
+
+The Streamlit app offers the following features:
+
+User-Friendly Interface:
+
+Form-based input for customer demographics, account information, services, and billing details.
+Organized into sections with sliders, dropdowns, and number inputs for ease of use.
+
+Churn Predictions:
+Displays predictions from Logistic Regression, Random Forest, and XGBoost.
+Shows churn probability as a percentage for each model.
+Visualized using Streamlit metrics for quick interpretation.
+
+Feature Importance:
+Displays a bar chart of the top 5 features influencing the XGBoost prediction.
+Helps identify key factors driving churn (e.g., tenure, contract type).
+
+Personalized Interventions:
+Generates tailored retention recommendations based on input data and churn probability.
+
+Examples:
+Offer discounts for month-to-month contract customers.
+Provide onboarding support for new customers (<12 months tenure).
+Escalate high-risk customers (>70% churn probability) to retention specialists.
+
+Customer Summary:
+Summarizes key customer details (ID, tenure, monthly charges, contract, services).
+Aids in quick review and decision-making.
+
+Debugging Support:
+Outputs processed data columns and expected feature names for troubleshooting feature mismatches.
+Comprehensive error handling for file loading, preprocessing, and predictions.
 
 # Conclusion
 Best Model: XGBoost achieved 85% accuracy and 0.84 AUC-ROC.
