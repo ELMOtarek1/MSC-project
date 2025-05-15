@@ -50,19 +50,7 @@ Usage: Primary model for predictions and feature importance visualization.
 
 The project is organized as follows: 
 
-D:\Desktop\programing\
-├── .venv\                     # Virtual environment
-├── pythonProject\python_py\   # Original directory for Streamlit app
-│   └── churn_prediction_dashboard.py
-├── WA_Fn-UseC_-Telco-Customer-Churn.csv  # Dataset (place here or update path)
-├── training_script.py         # Script to train models and save .pkl files
-├── churn_prediction_dashboard2.py  # Streamlit app for churn prediction
-└── New folder\                # Directory for saved .pkl files
-    ├── logistic_regression.pkl
-    ├── random_forest.pkl
-    ├── xgboost.pkl
-    ├── scaler.pkl
-    ├── feature_names.pkl
+![image](https://github.com/user-attachments/assets/91892bd0-5313-4bae-a554-ce8ef5834c9e)
 
 # Features
 
